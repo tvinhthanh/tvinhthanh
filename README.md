@@ -19,14 +19,14 @@ generator.
 **Money and inventory are written once. Any balance you can see is derived from
 that history, never edited in place.**
 
-| Project | How it shows up |
+| | How it shows up |
 |---|---|
-| [cms-pos](https://github.com/tvinhthanh/cms-pos) | The cashbook rejects `UPDATE` and `DELETE`. Order lines snapshot price and cost at the moment of sale, so changing a recipe next month cannot rewrite last month's profit. |
-| [pos-supabase](https://github.com/tvinhthanh/pos-supabase) | The same rules pushed down into Postgres triggers and row-level security — where a future endpoint cannot forget to call them. |
-| [WMS](https://github.com/tvinhthanh/WMS) | `InventoryLog` is the truth; the current stock figure is a position derived from it. Stock takes record the difference instead of overwriting it. |
-| [rental-lv](https://github.com/tvinhthanh/rental-lv) | Handover and return are two separately dated condition records. Vehicle rental disputes are never about the rate — they are about whether that scratch was already there. |
-| [lv-be](https://github.com/tvinhthanh/lv-be) | Shipping details are snapshotted onto the order at checkout. An address edited next month must not rewrite where last month's parcel went. |
-| [case study](https://github.com/tvinhthanh/social-platform-case-study) | Affiliate commission is a ledger; creator balances are a cache rebuilt from it. |
+| **[Point of sale](https://github.com/tvinhthanh/cms-pos)** | The cashbook rejects `UPDATE` and `DELETE`. Order lines snapshot price and cost at the moment of sale, so changing a recipe next month cannot rewrite last month's profit. |
+| **[POS, rebuilt](https://github.com/tvinhthanh/pos-supabase)** | The same rules pushed down into Postgres triggers and row-level security — where a future endpoint cannot forget to call them. |
+| **[Warehouse](https://github.com/tvinhthanh/WMS)** | `InventoryLog` is the truth; the current stock figure is a position derived from it. Stock takes record the difference instead of overwriting it. |
+| **[Vehicle rental](https://github.com/tvinhthanh/rental-lv)** | Handover and return are two separately dated condition records. Vehicle rental disputes are never about the rate — they are about whether that scratch was already there. |
+| **[Phone store](https://github.com/tvinhthanh/lv-be)** | Shipping details are snapshotted onto the order at checkout. An address edited next month must not rewrite where last month's parcel went. |
+| **[Social platform](https://github.com/tvinhthanh/social-platform-case-study)** | Affiliate commission is a ledger; creator balances are a cache rebuilt from it. |
 
 A mutable balance column is faster to write and impossible to defend the first
 time somebody disputes a number.
