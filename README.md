@@ -60,5 +60,5 @@ receiving, picking, product master data, stock movement tracking.
 
 ### Contact
 
-- LinkedIn — <!-- TODO: dán link sau khi đổi custom URL sang không dấu -->
-- Email — tvinhthanhsg@gmail.com
+- [LinkedIn](https://www.linkedin.com/in/v%C4%A9nh-th%C3%A0nh-tr%C6%B0%C6%A1ng-44a62b343/)
+- Email: tvinhthanhsg@gmail.com
